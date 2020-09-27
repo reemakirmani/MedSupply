@@ -29,17 +29,20 @@ body{
     padding: 0.5rem; 
 } 
 .brand a{ 
-    color: #ffffff; 
+   /* color: #ffffff;*/ 
     font-size: 2.5rem; 
     font-weight: bold; 
     text-decoration:none ; 
 } 
+.brand a:hover{
+    color: yellow;
+}
 .header-links a{ 
     color: #ffffff; 
     text-decoration: none; 
 } 
 .header-links a:hover{ 
-    color: aqua; 
+    color: yellow; 
 } 
 .main{ 
     grid-area: main; 
@@ -47,8 +50,103 @@ body{
 .footer{ 
     grid-area: footer; 
     background-color: #203040; 
+    color: #ffffff;
     display: flex; 
     justify-content: center; 
     align-items: center; 
 } 
- 
+
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.products li{
+    list-style: none;
+    padding: 0rem;
+    flex: 0 1 34rem;
+    margin: 1rem; 
+    height: 50rem;
+    border-bottom: 1rem black;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    
+}
+.product-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+.product-brand{
+    font-size: 1.2rem;
+    color: #808080;
+
+}
+.product-price{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.product-image{
+    max-width: 20rem;
+    max-height: 20rem;
+}
+.product-rating{
+    margin-bottom: 1rem;
+}
+.brand button{
+    font-size: 3rem;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.sidebar{
+
+    position: fixed;
+    /*transform: translateX(-30rem);*/
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: #f0f0f0;
+    height: 100%;
+    padding-top: 60px;
+}
+/*.sidebar.open{
+    transform: translateX(30);
+}*/
+.sidebar .closebtn{
+    /*border-radius: 50%;
+    border: .1rem #000000 solid;
+    width: 1rem;
+    height: 1rem;
+    padding: .5rem;*/
+    font-size: 36px;
+    /*padding-top: 0;*/
+    margin-left: 50px;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 0;
+  } 
+  .sidebar a{
+      padding-top: 40px;
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+  }
+  .sidebar a:hover{
+      color: blue;
+  }
